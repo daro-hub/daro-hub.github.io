@@ -15,8 +15,8 @@ body {
 
 body img {
     width: 100%;
-    height: 100%;
     position: absolute;
+    top: -24.2%;
     z-index: -100;
 }
 
@@ -30,15 +30,17 @@ body img {
     align-items: center;
     justify-content: space-between;
     padding-inline: 5%;
+    border: 1px solid red;
+    top: 0%;
 }
 
-.header h2 {
+.header a {
     color: var(--blue);
     transition: 0.2s ease-in-out;
     text-decoration: underline;
 }
 
-.header h2:hover {
+.header a:hover {
     color: var(--green);
 }
 
@@ -64,8 +66,9 @@ body img {
     margin: 0;
 }
 
-.body button {
+.body a {
     background-color: var(--green);
+    text-decoration: none;
     border: none;
     color: var(--orange);
     font-family: "Outfit", sans-serif;
@@ -78,7 +81,25 @@ body img {
     transition: 0.2s ease-in-out;
 }
 
-.body button:hover {
+.body a:hover {
     padding-inline: 2.5%;
     background-color: var(--blue);
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    border: 1px solid blue;
+    margin-top: 5%;
+}
+
+.categories {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid red;
+    width: 20%;
 }
