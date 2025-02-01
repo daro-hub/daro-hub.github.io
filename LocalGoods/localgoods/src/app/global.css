@@ -1,13 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 /* Global styles */
 :root {
-    --1: #3498db;
-    --2: #2ecc71;
+    --green: #82b22f;
+    --lightg: #b6ff39;
+    --red: #e56161;
+    --bg: #ffffff;
     --border-radius: 8px;
 }
 
 body {
-    font-family: "Outfit", sans-serif;
-    margin: 0;
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+  background-color: var(--bg);
 }
 
 a {
@@ -24,7 +29,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 30px;
+    padding: 15px 30px;
 }
 
 ul {
@@ -35,8 +40,12 @@ ul {
     padding: 0;
 }
 
+ul li{
+    white-space: nowrap;
+}
+
 ul li:hover {
-    /*   background-color: #f8f8f8; */
+    /*color: white;*/
 }
 
 .personal {
@@ -46,7 +55,7 @@ ul li:hover {
 }
 
 .personal button {
-    background-color: #cecece;
+    background-color: var(--green);
     border: none;
     cursor: pointer;
     border-radius: 50%;
@@ -60,5 +69,5 @@ ul li:hover {
 }
 
 .personal button:hover {
-    background-color: #e2e2e2;
+    background-color: var(--lightg);
 }     
