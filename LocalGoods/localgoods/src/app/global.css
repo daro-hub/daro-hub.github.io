@@ -14,10 +14,16 @@ body {
   margin: 0;
   background-color: var(--bg);
 }
-
+/* il link in cui mi trovo ora cambia colore*/
 a {
     text-decoration: none;
     color: black;
+    font-size: large;
+    transition: ease-in-out 0.3s;
+}
+
+a.active {
+    color: var(--red);
 }
 
 Header, Footer {
@@ -45,7 +51,7 @@ ul li{
 }
 
 ul li:hover {
-    /*color: white;*/
+    color: white;
 }
 
 .personal {
@@ -55,8 +61,8 @@ ul li:hover {
 }
 
 .personal button {
-    background-color: var(--green);
-    border: none;
+    border: 2px solid var(--green);
+    background-color: var(--bg);
     cursor: pointer;
     border-radius: 50%;
     width: 40px;

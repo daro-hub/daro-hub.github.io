@@ -13,7 +13,7 @@ export default function Personal() {
                         alt='Liked products' 
                         src={heart}
                         style={{
-                            maxWidth: '80%', 
+                            maxWidth: '100%', 
                             height: 'auto'
                         }}
                     />
@@ -25,7 +25,7 @@ export default function Personal() {
                         alt='Your cart' 
                         src={cart}
                         style={{
-                            maxWidth: '80%', 
+                            maxWidth: '100%', 
                             height: 'auto'
                         }}
                     />
@@ -37,7 +37,7 @@ export default function Personal() {
                         alt='Profile info' 
                         src={user}
                         style={{
-                            maxWidth: '80%', 
+                            maxWidth: '100%',  
                             height: 'auto'
                         }}
                     />
