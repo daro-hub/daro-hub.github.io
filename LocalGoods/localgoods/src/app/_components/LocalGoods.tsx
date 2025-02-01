@@ -4,14 +4,12 @@ import Link from 'next/link';
 
 export default function Header() {
     return (
-        <Link href={'/'} style={{
-                width: '20%',
-            }}>
+        <Link href={'/'}>
             <Image
                 alt='LocalGoods' 
                 src={lg}
                 style={{
-                    width: '100%',
+                    width: '350px',
                     height: 'auto'
                 }}
             />

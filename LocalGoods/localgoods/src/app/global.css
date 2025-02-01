@@ -5,25 +5,16 @@
     --green: #82b22f;
     --lightg: #b6ff39;
     --red: #e56161;
+    --pf: black;
+    --sf: #333333;
     --bg: #ffffff;
-    --border-radius: 8px;
+    --border-radius: 20px;
 }
 
 body {
   font-family: 'Outfit', sans-serif;
   margin: 0;
   background-color: var(--bg);
-}
-/* il link in cui mi trovo ora cambia colore*/
-a {
-    text-decoration: none;
-    color: black;
-    font-size: large;
-    transition: ease-in-out 0.3s;
-}
-
-a.active {
-    color: var(--red);
 }
 
 Header, Footer {
@@ -36,6 +27,18 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
+    height: 7vh;
+}
+
+a {
+    text-decoration: none;
+    color: var(--pf);
+    font-size: large;
+    transition: ease-in-out 0.3s;
+}
+
+a.active, a:hover {
+    color: var(--red);
 }
 
 ul {
@@ -48,10 +51,6 @@ ul {
 
 ul li{
     white-space: nowrap;
-}
-
-ul li:hover {
-    color: white;
 }
 
 .personal {
@@ -75,5 +74,93 @@ ul li:hover {
 }
 
 .personal button:hover {
-    background-color: var(--lightg);
+    background-color: var(--green);
 }     
+
+/* home styles */
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    height: 89vh;
+}
+
+.home h1 {
+    font-size: 50px;
+}
+
+.home p {
+    font-size: 20px;
+    color: var(--sf);
+}
+
+.home span {
+    color: var(--green);
+    font-weight: bolder;
+}
+
+.home .buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.home button {
+    border: 2px solid var(--green);
+    background-color: var(--bg);
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: ease-in-out 0.3s;
+}
+
+.home .order:hover {
+    background-color: var(--lightg);
+}
+
+.home .explore:hover {
+    background-color: var(--green);
+}
+
+.circle {
+    width: 40vw;
+    height: 40vw;
+    border-radius: 50%;
+    background-color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.embla {
+    overflow: hidden;
+    background-color: var(--green);
+    height: 100vh;
+}
+.embla__container {
+  display: flex;
+  
+  width: fit-content;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+  
+
+/* footer styles */
+footer {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 9vh;
+    background-color: var(--green);
+    color: white;
+    font-size: 20px;
+}
