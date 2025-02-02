@@ -8,6 +8,7 @@
     --pf: black;
     --sf: #333333;
     --bg: #ffffff;
+    --feafd: #df9713;
     --border-radius: 20px;
 }
 
@@ -84,11 +85,12 @@ ul li{
     align-items: center;
     justify-content: space-between;
     padding: 0 100px;
-    height: 89vh;
+    height: 89.7vh;
 }
 
 .home h1 {
-    font-size: 50px;
+    font-size: 70px;
+    margin: 0;
 }
 
 .home p {
@@ -128,31 +130,154 @@ ul li{
 }
 
 .circle {
-    width: 40vw;
-    height: 40vw;
+    width: 600px;
+    height: 600px;
     border-radius: 50%;
-    background-color: var(--green);
+    background-color: var(--red);
     display: flex;
     align-items: center;
     justify-content: right;
 }
 
-.embla {
-    overflow: hidden;
-    background-color: var(--green);
+/* carousel styles */
+.carousel {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--bg);
+    transition: ease-in-out 0.3s;
 }
-.embla__container {
-  display: flex;
-  
-  width: fit-content;
-}
-.embla__slide {
-  flex: 0 0 100%;
-  min-width: 0;
-}
-  
 
+.carousel h1 {
+    font-size: 90px;
+}
+
+.carouselInner {
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.carouselInner img{
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    transition: transform 0.5s ease, width 0.5s ease, opacity 0.5s ease-in-out;
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 10px black);
+}
+.carouselInner .active {
+    width: 400px;
+    height: 400px;
+}
+.carouselInner img:hover{
+    transform: scale(1.1);
+}
+
+.carouselInner button {
+    border: 4px solid var(--bg);
+    background-color: var(--green);
+    color: var(--bg);
+    font-size: 100px; 
+    padding: 10px 20px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 70px;
+    transition: ease-in-out 0.1s;
+}
+
+.carouselInner button:hover {
+    border: 2px solid var(--bg);
+    font-size: 25px;
+}
+
+.carousel .info{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    background-color: var(--bg);
+    padding: 20px;
+    border-radius: calc(2* var(--border-radius));
+    filter: drop-shadow(0px 0px 10px black);
+}
+
+.carousel .info h1 {
+    font-size: 50px;
+    margin: 0;
+    color: var(--green);
+}
+
+.carousel .info p {
+    font-size: 20px;
+    text-align: center;
+    color: black;
+}
+
+/* wtb styles */
+.wtb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 89.7vh;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.wtb img {
+    position: absolute;
+    width: 100vw;
+    transform: rotate(90deg);
+    height: auto;
+    filter: drop-shadow(0px 0px 10px black);
+}
+
+.wtb h1 {
+    font-size: 70px;
+    margin: 0;
+}
+
+.wtb .reasons {
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+}
+
+.wtb .reason {
+    width: 20vw;
+    height: 20vw;
+    background-color: var(--bg);
+    border-radius: calc(4* var(--border-radius));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 30px;
+    filter: drop-shadow(0px 0px 10px black);
+    padding: 20px;
+}
+
+.wtb .reason h1 {
+    font-size: 40px;
+}
+
+.wtb .reason p {
+    font-size: 20px;
+    text-align: center;
+}
+  
 /* footer styles */
 footer {
     height: 10vh;
@@ -160,7 +285,6 @@ footer {
     justify-content: center;
     align-items: center;
     height: 9vh;
-    background-color: var(--green);
-    color: white;
+    background-color: var(--bg);
     font-size: 20px;
 }
