@@ -5,6 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import Carousel from "./_components/Carousel";
 import products from "./_public/products.png";
+import basil from "./_public/basil1.png";
+import cherry from "./_public/cherry.png";
+import fresh from "./_public/fresh.png";
+import handmade from "./_public/handmade.png";
+import sustainability from "./_public/sustainability.png";
 
 export default function Home() {
   const sections = ["home", "products", "carousel"];
@@ -31,7 +36,7 @@ export default function Home() {
   }, [currentIndex]);
 
   return (
-    <div>
+    <div style={{ overflow: "hidden" }}>
       {/* Sezione Home */}
       <div className="home">
         <div>
@@ -73,29 +78,38 @@ export default function Home() {
       
       {/* Sezione why to buy */}
       <div className="wtb">
-        <h1>Why to buy from us?</h1>
+        <Image className="food" src={cherry} alt="food" style={{top: "2100px", left: "70px", transform:"rotate(37deg)"}}/>
+        <Image className="food" src={basil} alt="food" style={{top: "2400px", left: "300px", transform:"rotate(303deg)"}}/>
+        <Image className="food" src={cherry} alt="food" style={{top: "2450px", right: "30px", transform:"rotate(0deg)"}}/>
+        <Image className="food" src={basil} alt="food" style={{top: "2100px", right: "200px", transform:"rotate(42deg)"}}/>
         <div className="reasons">
 
-          <div className="reason">
-            <h1>Handmade</h1>
-            <p>Discover the authenticity of handmade products, created with care by skilled artisans. Each item is a labor of love, made using time-honored techniques and the finest natural ingredients. When you buy handmade, you’re not just getting a product—you’re experiencing craftsmanship, tradition, and dedication in every detail.</p>
+          <div className="row" style={{marginLeft: "350px"}}>
+            <div className="reason"> 
+              <h1>Fresh</h1>
+              <p>Experience the unbeatable flavor and quality of fresh, locally sourced products. Our ingredients are harvested at peak ripeness, ensuring vibrant taste and superior nutrition.</p>
+            </div>
+            <Image src={fresh} alt="fresh"/>
           </div>
 
-          <div className="reason">
-            <h1>Fresh</h1>
-            <p>Experience the unbeatable flavor and quality of fresh, locally sourced products. Our ingredients are harvested at peak ripeness, ensuring vibrant taste, superior nutrition, and a farm-to-table experience like no other. Say goodbye to preservatives and artificial additives—choose freshness, choose quality!</p>
+          <div className="row" style={{marginLeft: "30vw"}}>
+            <Image src={handmade} alt="handmade"/>
+            <div className="reason">
+              <h1>Handmade</h1>
+              <p>Discover the authenticity of handmade products, created with care by skilled artisans. Each item is a labor of love, made using time-honored techniques and the finest natural ingredients.</p>
+              
+            </div>
           </div>
-
-          <div className="reason">
-            <h1>Sustainable</h1>
-            <p>Support a greener future with our sustainably produced goods. We prioritize eco-friendly farming, ethical sourcing, and minimal waste to protect our planet while delivering top-quality products. Every purchase supports responsible practices that benefit both you and the environment. Choose sustainability—because small choices make a big impact!</p>
+          
+          <div className="row" style={{marginLeft: "25vw"}}>
+            <div className="reason">
+              <h1>Sustainable</h1>
+              <p>Support a greener future with our sustainably produced goods. We prioritize eco-friendly farming, ethical sourcing, and minimal waste to protect our planet.</p>
+            </div>
+            <Image src={sustainability} alt="sustainability"/>
           </div>
-
-          <div className="reason">
-            <h1>Accessibility</h1>
-            <p>We believe that high-quality products should be accessible to all. That’s why we offer premium goods at fair prices, making it easy for everyone to enjoy the best in taste, health, and sustainability. No compromises, just great products for every home and every lifestyle. Because quality should have no limits!</p>
-          </div>
-
+          
+          
         </div>
       </div>
     </div>
